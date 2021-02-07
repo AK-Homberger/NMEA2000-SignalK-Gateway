@@ -4,11 +4,11 @@ This is a gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
 SignalK becomes more and more popular to integrate and visualise data from different sources.
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements.
 
-I knoe, ther are other ways to integrate NMEA2000 in SignalK. But with this implementation you do have the full contol about how NMEA 2000 PGNs are interpreted and what "path" information is used to forward to SignalK.
+I know, there are other ways to integrate NMEA2000 in SignalK. But with this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK.
 
 The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries fro ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
 
-To use the gateway the following libraries have to be intalled:
+To use the gateway, the following libraries have to be intalled:
 
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
 - NMEA2000_esp32 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000_esp32))
@@ -39,7 +39,9 @@ But server discovery via MDNS is also supported.
 
 If you do have security enabled on your SignalK server you have use sigK.setServerToken("secret") with the correct value generate on the gateway.
 
-The gateway has many predefined conversion from NMEA 2000 to SignalK. Feel free to add more. Information regarding the different "path" information for SignalK conversion can be found [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
+The gateway has many predefined conversion from NMEA 2000 to SignalK. Feel free to add more. 
+
+Information regarding the different "path" information for SignalK conversion can be found [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
 
 The following PGNs are currently supported:
 ```
@@ -60,7 +62,7 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
     
  ```
  
- This picture shows the data in te SignalK Instrumentpanel WebApp window.
+ This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
  ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
  
