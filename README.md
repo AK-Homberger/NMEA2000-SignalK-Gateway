@@ -35,6 +35,27 @@ In setup() you can also define details regarding your local SignalK gateway:
 ```
 If you do have security enabled on your SignalK server you have use sigK.setServerToken("secret") with the correct value generate on the gateway.
 
-The gateway has many predefined conversion from NMEa 2000 to SignalK. Feel free to add more. Information regarding the different "path" information for SignalK conversion can be founf [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
+The gateway has many predefined conversion from NMEa 2000 to SignalK. Feel free to add more. Information regarding the different "path" information for SignalK conversion can be found [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
+
+The following PGNs are currently supported:
+```
+// Set the information for other bus devices, which messages we support
+const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
+      127250L, // Heading
+      128259L, // Boat speed
+      128267L, // Depth
+      129025L, // Position
+      129026L, // COG and SOG
+      129029L, // GNSS
+      130306L, // Wind
+      128275L, // Log
+      130310L, // Water temperature
+      127245L, // Rudder
+      0
+    };
+    
+ ```
+ 
+ 
 
 
