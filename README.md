@@ -14,4 +14,27 @@ To use the gateway the following libraries have to be intalled:
 - WebSockets (fom Markus Sattler, via Library Manager)
 - ArduinoJson (via Library Manager).
 
+In the main programmyou have to change the WLAN informatiom to allow the ESP32 to connect to you WLAN netweork.
+
+```
+const String hostname  = "NMEA2000-Gateway";    //Hostname for network discovery
+const String ssid      = "ssid";     //SSID to connect to
+const String ssidPass  = "password";  // Password for wifi
+```
+
+In setup() you can also define details regarding your local SignalK gateway:
+```
+  sigK.setPrintDebugSerial(false);       // Default false, causes debug messages to be printed to Serial (connecting etc) 
+  sigK.setPrintDeltaSerial(false);       // Default false, prints deltas to Serial.
+  sigK.setServerHost("192.168.0.20");    // Optional. Sets the ip of the SignalKServer to connect to. If not set we try to discover server with mDNS
+  sigK.setServerPort(80);                // If manually setting host, this sets the port for the signalK Server (default 80);
+  
+  //sigK.setServerToken("secret"); // if you have security enabled in node server, it wont accept deltas unles you auth
+  // add a user via the admin console, and then run the "signalk-generate-token" script
+  // included with signalk to generate the string. (or disable security)
+```
+If you do have security enabled on your SignalK server you have use sigK.setServerToken("secret") with the correct value generate on the gateway.
+
+The gateway has many predefined conversion from NMEa 2000 to SignalK. Feel free to add more. Information regarding the different "path" information for SignalK conversion can be founf [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
+
 
