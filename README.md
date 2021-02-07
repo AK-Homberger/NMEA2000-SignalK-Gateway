@@ -1,4 +1,4 @@
-# NMEA2000-SignalK-Gateway
+# NMEA2000 SignalK Gateway
 A gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
 
 SignalK becomes more and more popular to integrate and visualise data from different sources.
