@@ -4,6 +4,8 @@ This is a gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
 SignalK becomes more and more popular to integrate and visualise data from different sources.
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements.
 
+I knoe, ther are other ways to integrate NMEA2000 in SignalK. But with this implementation you do have the full contol about how NMEA 2000 PGNs are interpreted and what "path" information is used to forward to SignalK.
+
 The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries fro ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
 
 To use the gateway the following libraries have to be intalled:
