@@ -1,5 +1,5 @@
 # NMEA2000 SignalK Gateway
-A gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
+This is a gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
 
 SignalK becomes more and more popular to integrate and visualise data from different sources.
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements.
