@@ -6,11 +6,12 @@ This repository shows how to build a simple NMEA2000 to SignalK gateway using an
 
 The software is based on the ESP8266 library for SignalK. But it was necessary to change the software to use it on an ESP32 with up-to-date libraries fro ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
 
-To use the gatewa the following libraries have to be intalled:
+To use the gateway the following libraries have to be intalled:
 
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
-- NMEA2000_esp32 (via [ZI-File](https://github.com/ttlappalainen/NMEA2000_esp32))
+- NMEA2000_esp32 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000_esp32))
 - ESP32SSDP (via [ZIP-File](https://github.com/luc-github/ESP32SSDP))
 - WebSockets (fom Markus Sattler, via Library Manager)
 - ArduinoJson (via Library Manager).
+
 
