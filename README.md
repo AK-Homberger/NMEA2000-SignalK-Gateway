@@ -64,8 +64,14 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
     
  ```
  
- This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
+This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
- ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
+![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
+ 
+The following schematics shows the required components and connections.
+
+![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
+ 
+ 
  
 
