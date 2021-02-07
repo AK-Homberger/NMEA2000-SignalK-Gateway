@@ -14,7 +14,7 @@ To use the gateway the following libraries have to be intalled:
 - WebSockets (fom Markus Sattler, via Library Manager)
 - ArduinoJson (via Library Manager).
 
-In the main programmyou have to change the WLAN informatiom to allow the ESP32 to connect to you WLAN netweork.
+In the main programmyou have to change the WLAN informatiom to allow the ESP32 to connect to you WLAN network.
 
 ```
 const String hostname  = "NMEA2000-Gateway";    //Hostname for network discovery
@@ -35,7 +35,7 @@ In setup() you can also define details regarding your local SignalK gateway:
 ```
 If you do have security enabled on your SignalK server you have use sigK.setServerToken("secret") with the correct value generate on the gateway.
 
-The gateway has many predefined conversion from NMEa 2000 to SignalK. Feel free to add more. Information regarding the different "path" information for SignalK conversion can be found [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
+The gateway has many predefined conversion from NMEA 2000 to SignalK. Feel free to add more. Information regarding the different "path" information for SignalK conversion can be found [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
 
 The following PGNs are currently supported:
 ```
@@ -56,9 +56,8 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
     
  ```
  
- This picture shows the date in te SignalK Instimentpanel WebApp window.
+ This picture shows the data in te SignalK Instrumentpanel WebApp window.
  
  ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
  
-
 
