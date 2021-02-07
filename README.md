@@ -8,8 +8,10 @@ The software is based on the ESP8266 library for SignalK. But it was necessary t
 
 To compile the Gateway the followig additional libraries are required:
 
-- ArduiniJson (via Library Manager)
+- ArduinoJson (via Library Manager)
 
 - ESP32SSDP (via [ZIP-File](https://github.com/luc-github/ESP32SSDP))
+
+- 
 
 
