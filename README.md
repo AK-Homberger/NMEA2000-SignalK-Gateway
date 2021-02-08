@@ -75,6 +75,10 @@ The following schematics shows the required components and connections.
 
 ![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
  
+ If you prefer a cable connection between NMEA2000 bus and the SignalK server you can use the same hardware together with the sketch [ActisenseListenerSende-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino).
  
+
+
+The you will get directly all PGNs in the SignalK server.
  
 
