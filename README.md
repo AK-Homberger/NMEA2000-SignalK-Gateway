@@ -28,16 +28,19 @@ const String ssidPass  = "password";  // Password for wifi
 
 In setup() you can also define details regarding your local SignalK gateway:
 ```
-  sigK.setPrintDebugSerial(false);       // Default false, causes debug messages to be printed to Serial (connecting etc) 
+ sigK.setPrintDebugSerial(true);       // Default false, causes debug messages to be printed to Serial (connecting etc)
   sigK.setPrintDeltaSerial(false);       // Default false, prints deltas to Serial.
-  sigK.setServerHost("192.168.0.20");    // Optional. Sets the ip of the SignalKServer to connect to. If not set we try to discover server with mDNS
-  sigK.setServerPort(80);                // If manually setting host, this sets the port for the signalK Server (default 80);
-  
+  //sigK.setServerHost("192.168.0.20");    // Optional. Sets the ip of the SignalKServer to connect to. If not set we try to discover server with mDNS
+  //sigK.setServerPort(80);                // If manually setting host, this sets the port for the signalK Server (default 80);
+
   //sigK.setServerToken("secret"); // if you have security enabled in node server, it wont accept deltas unles you auth
   // add a user via the admin console, and then run the "signalk-generate-token" script
   // included with signalk to generate the string. (or disable security)
+
+  sigK.begin();                          // Start everything. Connect to wifi, setup services, etc...
+
 ```
-But server discovery via MDNS is also supported.
+Server discovery via MDNS is default. If the ESP32 can't find the SignalK server, you can set the hostname and port of the server.
 
 If you do have security enabled on your SignalK server you have use sigK.setServerToken("secret") with the correct value generate on the gateway.
 
