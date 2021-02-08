@@ -80,7 +80,7 @@ The following schematics shows the required components and connections.
 
 If you prefer a cable connection between NMEA2000 bus and the SignalK server you can use the same hardware together with the sketch [ActisenseListenerSende-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino).
  
-Then you will get directly all NMEA2000 PGNs in the SignalK server. You only have to define a new date source within the server.
+Then you will get directly all NMEA2000 PGNs in the SignalK server. You only have to define a new data source within the server.
 
 ![source](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/SignalK-Actisense.png)
 
