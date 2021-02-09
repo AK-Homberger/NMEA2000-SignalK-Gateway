@@ -4,7 +4,7 @@ This is a gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
 SignalK becomes more and more popular to integrate and visualise data from different sources.
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements (CAN bus transceiver, DC converter).
 
-I know, there are [other](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway#option-usb-serial-connection-to-signalk-server) ways to integrate NMEA2000 in SignalK. But with this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK.
+I know, there are [other](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/README.md#option-usb-serial-connection-to-signalk-server) ways to integrate NMEA2000 in SignalK. But with this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK.
 
 The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries for ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
 
