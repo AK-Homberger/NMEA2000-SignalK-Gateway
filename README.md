@@ -1,10 +1,17 @@
 # NMEA2000 SignalK Gateway
-This is a gateway to send  NMEA2000 PGNs to a SignalK server via WLAN.
 
 SignalK becomes more and more popular to integrate and visualise data from different sources.
+
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements (CAN bus transceiver, DC converter).
 
-I know, there are [other](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/README.md#option-usb-serial-connection-to-signalk-server) ways to integrate NMEA2000 in SignalK. But with this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK.
+There two different ways shown to implement a NMEA2000 to SignalK gateway:
+
+1. A WLAN gateway for specific PGNs
+2. An USB-Serial Gateway for all PGNs
+
+# 1. WLAN Gateway
+
+With this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK. The connection between the ESP32 and the SignalK server is wireless with WLAN.
 
 The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries for ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
 
@@ -66,7 +73,8 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
     };
     
  ```
- 
+It is sinple to add other PGNs as required.
+
 This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
@@ -76,7 +84,7 @@ The following schematics shows the required components and connections.
 ![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
  
 
-## Option: USB-Serial connection to SignalK server
+# 2. USB-Serial connection to SignalK server
 
 If you prefer a cable connection between NMEA2000 bus and the SignalK server, you can use the same hardware together with the sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino).
 
