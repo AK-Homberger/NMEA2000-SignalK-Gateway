@@ -18,7 +18,7 @@ For both implementations the same hardware is used. The following schematics sho
 
 With this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK. The connection between the ESP32 and the SignalK server is wireless with WLAN.
 
-The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries for ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
+The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries (ArduinoJson, ESP32SSDP, WebSockets).
 
 And I had to add also a String-Method for "EspSigK::addDeltaValue()" and "EspSigK::sendDelta()". Without the extension, it was not possible to send a position.
 
