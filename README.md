@@ -7,7 +7,7 @@ This repository shows how to build a simple NMEA2000 to [SignalK](https://signal
 There are two different ways shown to implement a NMEA2000 to SignalK gateway:
 
 1. A WLAN gateway for specific PGNs
-2. An USB-Serial Gateway for all PGNs
+2. An USB-Serial gateway for all PGNs
 
 For both implementations the same hardware is used. The following schematics shows the required components and connections.
 
