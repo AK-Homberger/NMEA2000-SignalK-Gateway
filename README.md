@@ -78,7 +78,7 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
     };
     
  ```
-It is sinple to add other PGNs as required.
+It is easy to add other PGNs as required.
 
 This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
