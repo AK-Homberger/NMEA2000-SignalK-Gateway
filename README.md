@@ -9,6 +9,11 @@ There two different ways shown to implement a NMEA2000 to SignalK gateway:
 1. A WLAN gateway for specific PGNs
 2. An USB-Serial Gateway for all PGNs
 
+For both implementations the same hardware is used. The following schematics shows the required components and connections.
+
+![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
+
+
 # 1. WLAN Gateway
 
 With this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK. The connection between the ESP32 and the SignalK server is wireless with WLAN.
@@ -78,10 +83,6 @@ It is sinple to add other PGNs as required.
 This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
- 
-The following schematics shows the required components and connections.
-
-![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
  
 
 # 2. USB-Serial connection to SignalK server
