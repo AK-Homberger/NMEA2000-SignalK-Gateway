@@ -80,7 +80,7 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
  ```
 It is easy to add other PGNs as required.
 
-You can also connect sensors (I2C, 1-Wire) to the ESP32. Then it is also possible to send sensor data to the SignalK server.
+You can also connect sensors (I2C, 1-Wire) to the ESP32. Then it is also possible to send sensor data to the SignalK server. See Examples of the [EspSigK](https://github.com/mxtommy/EspSigK) library for details on hoe to send.
 
 This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
