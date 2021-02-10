@@ -82,7 +82,7 @@ It is easy to add other PGNs as required.
 
 You can also connect sensors (I2C, 1-Wire) to the ESP32. Then it is also possible to send sensor data to the SignalK server. See Examples of the [EspSigK](https://github.com/mxtommy/EspSigK) library for details on how to send.
 
-Alternativly you can follow the tutorial part of the NMEA2000 tutorial regarding [SignalK](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/BME280-3-SignalK.md) (currently only available in German language, but you can use Google translator).
+Alternatively you can follow the tutorial part of the NMEA2000 tutorial regarding [SignalK](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/BME280-3-SignalK.md) (currently only available in German language, but you can use Google translator).
 
 This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
