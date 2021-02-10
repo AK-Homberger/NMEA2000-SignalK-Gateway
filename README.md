@@ -1,4 +1,4 @@
-# NMEA2000 SignalK Gateway
+# NMEA2000 to SignalK Gateway
 
 SignalK becomes more and more popular to integrate and visualise data from different sources.
 
