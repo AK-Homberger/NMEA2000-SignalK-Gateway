@@ -22,7 +22,7 @@ The software is based on the ESP8266 library for SignalK ([EspSigK](https://gith
 
 And I had to add also a String-Method for "EspSigK::addDeltaValue()" and "EspSigK::sendDelta()". Without the extension, it was not possible to send a position.
 
-To use the gateway, the following libraries have to be intalled:
+To use the gateway, the following libraries have to be installed:
 
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
 - NMEA2000_esp32 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000_esp32))
