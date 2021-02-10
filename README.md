@@ -20,7 +20,7 @@ With this implementation you do have the full contol about how NMEA2000 PGNs are
 
 The software is based on the ESP8266 library for SignalK ([EspSigK](https://github.com/mxtommy/EspSigK)). But it was necessary to change the software to use it on an ESP32 with up-to-date libraries for ESP32 (ArduinoJson, ESP32SSDP, WebSockets).
 
-And I had to add also a String-Method for "EspSigK::addDeltaValue()" and "EspSigK::addDeltaValue()". Without the extension, it was not possible to send a position.
+And I had to add also a String-Method for "EspSigK::addDeltaValue()" and "EspSigK::sendDeltaValue()". Without the extension, it was not possible to send a position.
 
 To use the gateway, the following libraries have to be intalled:
 
