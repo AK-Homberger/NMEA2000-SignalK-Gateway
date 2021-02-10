@@ -56,7 +56,7 @@ Server discovery via MDNS is default. If the ESP32 can't find the SignalK server
 
 If you do have security enabled on your SignalK server you have to use "sigK.setServerToken("secret")" with the correct value generated on the gateway.
 
-The gateway has many predefined conversion from NMEA 2000 to SignalK. Feel free to add more. 
+The gateway has many predefined conversions from NMEA2000 to SignalK. Feel free to add more. 
 
 Information regarding the different "path" information for SignalK conversion can be found [here](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html).
 
