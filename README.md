@@ -4,7 +4,7 @@ SignalK becomes more and more popular to integrate and visualise data from diffe
 
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements (CAN bus transceiver, DC converter).
 
-There two different ways shown to implement a NMEA2000 to SignalK gateway:
+There are two different ways shown to implement a NMEA2000 to SignalK gateway:
 
 1. A WLAN gateway for specific PGNs
 2. An USB-Serial Gateway for all PGNs
