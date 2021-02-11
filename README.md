@@ -109,11 +109,10 @@ const char * udpAddress = "192.168.0.20"; // UDP broadcast address. Should be th
 const int udpPort = 4444;                 // YD UDP port
 ```
 
+You have to define a new Data Source in the SignalK server:
 
+![YachtDevices](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/SignalK-YachtDevicesUDP.png)
 
-
-
- 
 
 # 3. USB-Serial connection to SignalK server
 
