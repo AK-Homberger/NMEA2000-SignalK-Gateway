@@ -15,7 +15,7 @@ For all implementations the same hardware is used. The following schematics show
 ![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
 
 
-# 1. WLAN Gateway
+# 1. WLAN Gateway (specific PGNs)
 
 With this implementation you do have the full contol about how NMEA2000 PGNs are interpreted and what "path" information is used to forward it to SignalK. The connection between the ESP32 and the SignalK server is wireless with WLAN.
 
@@ -89,7 +89,7 @@ This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
 
-# 2. WLAN Gateway
+# 2. WLAN Gateway (all PGNS)
 The second implementation shows how to build a gateway that sends all PGNs form NMEA2000 via WLAN to a SignalK server. The format is Yacht Devices format via UDP. TCP is also possible, but I recognised re-connect problems (restart of SignalK server necessary). But UDP is working fine.
 
 For this solution, only these libraries have to be installed:
