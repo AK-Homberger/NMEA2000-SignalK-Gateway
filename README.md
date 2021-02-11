@@ -4,12 +4,13 @@ SignalK becomes more and more popular to integrate and visualise data from diffe
 
 This repository shows how to build a simple NMEA2000 to [SignalK](https://signalk.org/) gateway using an ESP32 and only a few more elements (CAN bus transceiver, DC converter).
 
-There are two different ways shown to implement a NMEA2000 to SignalK gateway:
+There are three different ways shown to implement a NMEA2000 to SignalK gateway:
 
 1. A WLAN gateway for specific PGNs
-2. An USB-Serial gateway for all PGNs
+2. A WLAN gateway for all PGNs (Yacht Devices format via UDP)
+3. An USB-Serial gateway for all PGNs (Actisense format)
 
-For both implementations the same hardware is used. The following schematics shows the required components and connections.
+For all implementations the same hardware is used. The following schematics shows the required components and connections.
 
 ![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
 
@@ -87,9 +88,13 @@ Alternatively you can follow the tutorial part of the NMEA2000 tutorial regardin
 This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
+
+# 2. WLAN Gateway
+
+
  
 
-# 2. USB-Serial connection to SignalK server
+# 3. USB-Serial connection to SignalK server
 
 If you prefer a cable connection between NMEA2000 bus and the SignalK server, you can use the same hardware together with the sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino).
 
