@@ -31,7 +31,7 @@ To use the gateway, the following libraries have to be installed:
 - WebSockets (fom Markus Sattler, via Library Manager)
 - ArduinoJson (via Library Manager).
 
-In the main programm, you have to change the WLAN informatiom to allow the ESP32 to connect to you WLAN network.
+In the [main programm](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/tree/main/NMEA2000-SignalK-Gateway), you have to change the WLAN informatiom to allow the ESP32 to connect to you WLAN network.
 
 ```
 const String hostname  = "NMEA2000-Gateway";    //Hostname for network discovery
