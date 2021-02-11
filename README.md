@@ -90,13 +90,13 @@ This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
 
 # 2. WLAN Gateway
-The second implementation shows how to buid a gatewas that sends all PGNs form NMEA 2000 via WLAN to a SignalK server. The format is Yacht Devices format via UDP. TCP is also possible, but I recognised re-connect problems (restart of SignalK server necessry). But UDP is working fine.
+The second implementation shows how to buid a gateway that sends all PGNs form NMEA2000 via WLAN to a SignalK server. The format is Yacht Devices format via UDP. TCP is also possible, but I recognised re-connect problems (restart of SignalK server necessary). But UDP is working fine.
 
 For this solution, only these libraries have to be installed:
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
 - NMEA2000_esp32 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000_esp32))
 
-in the [Programm](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/NMEA2000-SignalK-YD-Gateway/NMEA2000-SignalK-YD-Gateway.ino) you have to set the dtails for your WLAN and also for the SignalK server.
+in the [Programm](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/NMEA2000-SignalK-YD-Gateway/NMEA2000-SignalK-YD-Gateway.ino) you have to set the details for your WLAN and also for the SignalK server.
 
 ```
 const char* hostname  = "NMEA2000-Gateway";    // Hostname for network discovery
@@ -109,9 +109,11 @@ const char * udpAddress = "192.168.0.20"; // UDP broadcast address. Should be th
 const int udpPort = 4444;                 // YD UDP port
 ```
 
-You have to define a new Data Source in the SignalK server:
+With this solution, you will get directly all NMEA2000 PGNs in the SignalK server. You have to define a new Data Connection in the SignalK server:
 
 ![YachtDevices](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/SignalK-YachtDevicesUDP.png)
+
+That's all.
 
 
 # 3. USB-Serial connection to SignalK server
@@ -122,7 +124,7 @@ In this case, only these libraries have to be installed:
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
 - NMEA2000_esp32 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000_esp32))
  
-With this solution, you will get directly all NMEA2000 PGNs in the SignalK server. You only have to define a new data source within the server.
+With this solution, you will get directly all NMEA2000 PGNs in the SignalK server. You have to define a new data connection within the server.
 
 ![source](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/SignalK-Actisense.png)
 
