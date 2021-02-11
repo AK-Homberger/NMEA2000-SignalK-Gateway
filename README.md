@@ -89,7 +89,7 @@ This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
  
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
 
-# 2. WLAN Gateway (all PGNS)
+# 2. WLAN Gateway (all PGNs)
 The second implementation shows how to build a gateway that sends all PGNs form NMEA2000 via WLAN to a SignalK server. The format is Yacht Devices format via UDP. TCP is also possible, but I recognised re-connect problems (restart of SignalK server necessary). But UDP is working fine.
 
 For this solution, only these libraries have to be installed:
@@ -116,7 +116,7 @@ With this solution, you will get directly all NMEA2000 PGNs in the SignalK serve
 That's all.
 
 
-# 3. USB-Serial connection to SignalK server
+# 3. USB-Serial connection to SignalK server (all PGNs)
 
 If you prefer a cable connection between NMEA2000 bus and the SignalK server, you can use the same hardware together with the sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino).
 
