@@ -55,7 +55,7 @@ In setup() you can also define details regarding your local SignalK gateway:
 ```
 Server discovery via MDNS is default. If the ESP32 can't find the SignalK server, you can set the hostname and port of the server.
 
-If you do have security enabled on your SignalK server you have to use "sigK.setServerToken("secret")" with the correct value generated on the gateway.
+If you do have security enabled on your SignalK server, you have to use "sigK.setServerToken("secret")" with the correct value generated on the gateway.
 
 The gateway has many predefined conversions from NMEA2000 to SignalK. Feel free to add more. 
 
