@@ -115,6 +115,8 @@ With this solution, you will get directly all NMEA2000 PGNs in the SignalK serve
 
 That's all.
 
+Many thanks to the Canboatjs team for the [CanId](https://github.com/canboat/canboatjs/blob/3f530b4d8f9237aec1757dce70e38262d631d8ec/lib/canId.js#L35) calculation. That was very helpful.
+
 
 # 3. USB-Serial connection to SignalK server (all PGNs)
 
