@@ -128,4 +128,6 @@ With this solution, you will get directly all NMEA2000 PGNs in the SignalK serve
 
 ![source](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/SignalK-Actisense.png)
 
+As COM port you have to select the COM port of the ESP32.
+
 That's all.
