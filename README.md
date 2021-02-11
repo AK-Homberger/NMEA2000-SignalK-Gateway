@@ -8,7 +8,7 @@ There are three different ways shown to implement a NMEA2000 to SignalK gateway:
 
 1. [A WLAN gateway for specific PGNs](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/README.md#1-wlan-gateway-specific-pgns)
 2. [A WLAN gateway for all PGNs (Yacht Devices format via UDP)](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/README.md#2-wlan-gateway-all-pgns)
-3. An USB-Serial gateway for all PGNs (Actisense format)
+3. [An USB-Serial gateway for all PGNs (Actisense format)](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/README.md#3-usb-serial-connection-to-signalk-server-all-pgns)
 
 For all implementations the same hardware is used. The following schematics shows the required components and connections.
 
