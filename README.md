@@ -90,7 +90,7 @@ This picture shows the data in te SignalK "Instrumentpanel WebApp" window.
 ![Intruments](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
 
 # 2. WLAN Gateway (all PGNs)
-The second implementation shows how to build a gateway that sends all PGNs form NMEA2000 via WLAN to a SignalK server. The format is Yacht Devices format via UDP. TCP is also possible, but I recognised re-connect problems (restart of SignalK server necessary). But UDP is working fine.
+The second implementation shows how to build a gateway that sends all PGNs from NMEA2000 via WLAN to a SignalK server. The format is Yacht Devices format via UDP. TCP is also possible, but I recognised re-connect problems (restart of SignalK server necessary). But UDP is working fine.
 
 For this solution, only these libraries have to be installed:
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
