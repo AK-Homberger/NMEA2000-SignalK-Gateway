@@ -111,6 +111,8 @@ const int udpPort = 4444;                 // YD UDP port
 
 With "192.168.0.20" it will send UDP packets only to the gateway IP. Broadcast to all is possible with "192.168.0.255". But you have to ajust to your network address anyway in both cases.
 
+With a broadcast you can also use many apps on tablets dirctly with NMEA 2000 (e.g. [NMEAremote](https://www.zapfware.de/nmearemote/) from Zapfware).
+
 With this solution, you will get directly all NMEA2000 PGNs in the SignalK server. You have to define a new Data Connection in the SignalK server:
 
 ![YachtDevices](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/SignalK-YachtDevicesUDP.png)
