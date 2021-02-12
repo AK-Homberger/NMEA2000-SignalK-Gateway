@@ -128,7 +128,7 @@ Many thanks to the Canboatjs team for the [CanId](https://github.com/canboat/can
 
 If you prefer a cable connection between NMEA2000 bus and the SignalK server, you can use the same hardware together with the sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino).
 
-Due to the fact that power is supplied through USB, you do not need the additional DC onverter.
+Due to the fact that power is supplied through USB, you do not need the additional DC converter.
 
 For this implementation, only these libraries have to be installed:
 - NMEA2000 (via [ZIP-File](https://github.com/ttlappalainen/NMEA2000))
