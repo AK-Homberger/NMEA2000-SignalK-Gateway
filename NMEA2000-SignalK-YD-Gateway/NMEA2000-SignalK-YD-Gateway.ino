@@ -13,7 +13,7 @@
 */
 
 // Read PGNs from NMEA2000-Bus and send as Yacht Devices format to SignalK server (UDP)
-// Version 0.1, 10.02.2021, AK-Homberger
+// Version 0.2, 12.02.2021, AK-Homberger
 
 #define ESP32_CAN_TX_PIN GPIO_NUM_5  // Set CAN TX port to 5 
 #define ESP32_CAN_RX_PIN GPIO_NUM_4  // Set CAN RX port to 4
@@ -27,6 +27,7 @@
 #include <sys/time.h>
 
 #define Max_YD_Message_Size 500
+char YD_msg[Max_YD_Message_Size] = "";
 
 int NodeAddress;            // To store last Node Address
 Preferences preferences;    // Nonvolatile storage on ESP32 - To store LastDeviceAddress
@@ -35,19 +36,15 @@ const char* hostname  = "NMEA2000-Gateway";    // Hostname for network discovery
 const char* ssid      = "ssid";                // SSID to connect to
 const char* ssidPass  = "password";            // Password for wifi
 
-
 // UPD broadcast to SignalK server
-const char * udpAddress = "192.168.0.20"; // UDP broadcast address. Should be the SignalK server
-const int udpPort = 4444;                 // YD UDP port
-
+const char* udpAddress = "192.168.0.255"; // UDP (broadcast) address. Should be the SignalK server or .255 for all
+const int udpPort = 4444;                  // YD UDP port
 
 // Create UDP instance
 WiFiUDP udp;
 
 uint16_t DaysSince1970 = 0;
 double SecondsSinceMidnight = 0;
-
-char YD_msg[Max_YD_Message_Size] = "";
 
 
 //*****************************************************************************
@@ -115,6 +112,16 @@ void setup() {
 
 
 //*****************************************************************************
+void HandleSytemTime(const tN2kMsg & N2kMsg) {
+  unsigned char SID;
+  tN2kTimeSource TimeSource;
+
+  ParseN2kSystemTime(N2kMsg, SID, DaysSince1970, SecondsSinceMidnight,
+                     TimeSource);
+}
+
+
+//*****************************************************************************
 void HandleGNSS(const tN2kMsg & N2kMsg) {
 
   unsigned char SID;
@@ -148,12 +155,13 @@ void N2kToYD_Can(const tN2kMsg &msg, char *MsgBuf) {
   char time_str[20];
   char Byte[5];
   unsigned int PF;
-  unsigned long MyTime = 0;
   time_t rawtime;
   struct tm  ts;
 
   len = msg.DataLen;
   if (len > 134) len = 134;
+
+  // Set CanID
 
   canId = msg.Source & 0xff;
   PF = (msg.PGN >> 8) & 0xff;
@@ -162,21 +170,19 @@ void N2kToYD_Can(const tN2kMsg &msg, char *MsgBuf) {
     canId = (canId | ((msg.Destination & 0xff) << 8));
     canId = (canId | (msg.PGN << 8));
   } else {
-    canId = (canId | msg.PGN << 8);
+    canId = (canId | (msg.PGN << 8));
   }
 
-  canId = (canId | msg.Priority << 26);
+  canId = (canId | (msg.Priority << 26));
 
-  MyTime = (DaysSince1970 * 3600 * 24) + SecondsSinceMidnight;  // Create time from GNSS time
-
-  rawtime = MyTime; // Create time from NMEA 2000 time (UTC)
+  rawtime = (DaysSince1970 * 3600 * 24) + SecondsSinceMidnight;  // Create time from GNSS time;
   ts = *localtime(&rawtime);
-  strftime(time_str, sizeof(time_str), "%T.000", &ts); // Create time string
+  strftime(time_str, sizeof(time_str), "%T.000", &ts);  // Create time string
 
-  snprintf(MsgBuf, 25, "%s R %0.8x", time_str, canId); // Set time and canID
+  snprintf(MsgBuf, 25, "%s R %0.8x", time_str, canId);  // Set time and canID
 
   for (i = 0; i < len; i++) {
-    snprintf(Byte, 4, " %0.2x", msg.Data[i]);   // Add data fields
+    snprintf(Byte, 4, " %0.2x", msg.Data[i]);           // Add data fields
     strcat(MsgBuf, Byte);
   }
 }
@@ -185,8 +191,9 @@ void N2kToYD_Can(const tN2kMsg &msg, char *MsgBuf) {
 //*****************************************************************************
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
 
-  if (N2kMsg.PGN == 129029L) HandleGNSS(N2kMsg);   // Just to get time
-
+  if (N2kMsg.PGN == 126992L) HandleGNSS(N2kMsg);      // Just to get time from GNSS
+  if (N2kMsg.PGN == 129029L) HandleSytemTime(N2kMsg); // or this way
+  
   N2kToYD_Can(N2kMsg, YD_msg);            // Create YD message from PGN
 
   udp.beginPacket(udpAddress, udpPort);   // Send to UDP
