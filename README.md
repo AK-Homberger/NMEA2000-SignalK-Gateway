@@ -158,4 +158,4 @@ That's all.
 - J1 Connector 2-pin [Link](https://www.reichelt.de/de/en/2-pin-terminal-strip-spacing-5-08-akl-101-02-p36605.html?&nbc=1)
 
 ## Updates:
-- 20.02.21 Version 1.0: Initial version.
+- 12.02.21 Version 1.0: Initial version.
