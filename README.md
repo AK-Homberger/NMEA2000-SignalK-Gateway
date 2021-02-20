@@ -14,6 +14,14 @@ For all implementations the same hardware is used. The following schematics show
 
 ![Schematics](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/ESP32-Minimum.png)
 
+The PCB from the [WLAN gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) can be used for the gateway. Just ignore the not needed parts.
+
+![PCB](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32/blob/master/KiCAD/ESP32WifiAisTempVolt2/ESP32WifiAisTempVolt2-PCB.png)
+
+The board can be ordered at Aisler.net: https://aisler.net/p/DNXXRLFU
+
+**!!! Be careful with placing the the ESP32 on the PCB. The USB connector has to be on the right side !!!**
+
 
 # 1. WLAN Gateway (specific PGNs)
 
