@@ -129,7 +129,7 @@ For SignalK you have to define a new Data Connection in the SignalK server:
 
 That's all.
 
-Many thanks to the Canboatjs team for the [CanId](https://github.com/canboat/canboatjs/blob/3f530b4d8f9237aec1757dce70e38262d631d8ec/lib/canId.js#L35) calculation. That was very helpful for my [implementation](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/3878ba35182d8258470d97c02fec8038486888a7/NMEA2000-SignalK-YD-Gateway/NMEA2000-SignalK-YD-Gateway.ino#L164).
+Many thanks to the Canboatjs team for the [CanId](https://github.com/canboat/canboatjs/blob/3f530b4d8f9237aec1757dce70e38262d631d8ec/lib/canId.js#L35) calculation. That was very helpful for my [implementation](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/5fc1b70a0c792d83c683417b47606a6253cc3780/NMEA2000-SignalK-YD-Gateway/NMEA2000-SignalK-YD-Gateway.ino#L164).
 
 
 # 3. USB-Serial connection to SignalK server (all PGNs)
